@@ -5,5 +5,42 @@
 }
 
 #nivel_cafe2{
+    height: 100vh;
+    background-color:beige;
     
+}
+
+#cabecalho{
+    height: 100px;
+    background-color: #1E3A8A;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#menu_hamburguer {
+    width: 100%;
+    background: #FBBF24;
+    color: #111111;
+}
+
+#itens_menu ul {
+    display: flex;         
+    list-style: none;       
+    padding: 0;
+    margin: 0;
+    justify-content: center; /
+    gap: 20px;             
+}
+
+#itens_menu li {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#objetivo_cartilha{
+    height: 100vh;
+    font-size: large;
 }
