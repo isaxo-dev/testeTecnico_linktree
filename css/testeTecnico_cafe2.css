@@ -1,46 +1,315 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-#nivel_cafe2{
-    height: 100vh;
-    background-color:beige;
-    
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #fff8dc;
+    color: #003366;
+    padding: 1rem;
 }
 
-#cabecalho{
-    height: 100px;
-    background-color: #1E3A8A;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+h1, h2, h3 {
+    color: #003366;
+    margin-bottom: 0.5rem;
 }
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+ul, ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+ul ul, ul ol, ol ul, ol ol {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+#nivel_cafe2 {
+    margin: 0 auto;
+    background: #fff8dc;
+    padding: 5rem 2rem 2rem; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 51, 102, 0.2);
+}
+
+#cabecalho {
+    margin-bottom: 1rem;
+}
+
 
 #menu_hamburguer {
-    width: 100%;
-    background: #FBBF24;
-    color: #111111;
+    background-color: #003366;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+
+    position: sticky; 
+    top: 0;
+    z-index: 999;
 }
 
 #itens_menu ul {
-    display: flex;         
-    list-style: none;       
-    padding: 0;
-    margin: 0;
-    justify-content: center; 
-    gap: 20px;             
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-#itens_menu li {
-    padding: 10px 15px;
+#itens_menu ul li.menu {
+    margin: 0.5rem 1rem;
+}
+
+#itens_menu ul li.menu p {
+    color: #ffdb4d;
+    font-weight: bold;
     cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-#objetivo_cartilha{
-    height: 100vh;
-    font-size: large;
+#itens_menu ul li.menu p:hover,
+#itens_menu ul li.menu p:focus {
+    background-color: #ffdb4d;
+    color: #003366;
+    outline: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ffdb4d;
+    margin: 2rem 0;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    background-color: #fff8dc;
+    table-layout: auto;
+    word-break: break-word;
+    white-space: normal;
+}
+
+table caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: #003366;
+}
+
+table thead tr {
+    background-color: #003366;
+    color: #ffdb4d;
+}
+
+table th, table td {
+    border: 1px solid #ffdb4d;
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+    word-break: break-word;
+    white-space: normal;
+}
+
+table th {
+    font-weight: 600;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #fff1b8;
+}
+
+td ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+button {
+    background-color: #003366;
+    color: #ffdb4d;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:focus {
+    background-color: #002244;
+    outline: none;
+}
+
+#rodape {
+    background-color: #003366;
+    color: #ffdb4d;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+#rodape h2 {
+    margin-bottom: 1rem;
+    color: #ffdb4d;
+}
+
+#rodape p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #ffdb4d;
+}
+
+#rodape a button {
+    background-color: #ffdb4d;
+    color: #003366;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#rodape a button:hover,
+#rodape a button:focus {
+    background-color: #e6c84d;
+    outline: none;
+}
+
+a:focus, button:focus, #itens_menu ul li.menu p:focus {
+    outline: 2px solid #ffdb4d;
+    outline-offset: 2px;
+}
+
+
+@media (max-width: 768px) {
+    #itens_menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #itens_menu ul li.menu {
+        margin: 0.3rem 0;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.2rem; }
+    p, li { font-size: 0.95rem; }
+    table { font-size: 0.85rem; }
+
+    #itens_menu ul li.menu p {
+        padding: 0.75rem 1.5rem;
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    body { padding: 0.5rem; }
+    #nivel_cafe2 { padding: 5rem 1rem 1rem; }
+
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+    p, li { font-size: 0.9rem; }
+    table { font-size: 0.8rem; }
+
+    #itens_menu ul li.menu p {
+        padding: 0.6rem 1rem;
+    }
+
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead { display: none; }
+
+    table tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ffdb4d;
+        border-radius: 6px;
+        padding: 0.5rem;
+        background: #fff;
+    }
+
+    table td {
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.4rem 0.6rem;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 0.5rem;
+        color: #003366;
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.1rem; }
+    h3 { font-size: 1rem; }
+    p, li { font-size: 0.85rem; }
+    table { font-size: 0.75rem; }
+    #rodape p { font-size: 0.85rem; }
+
+    #itens_menu ul li.menu p {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
 }
